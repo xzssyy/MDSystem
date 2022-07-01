@@ -13,9 +13,14 @@ module school.mdsystem {
     exports school.mdsystem.student.controller;
     opens school.mdsystem to javafx.graphics;
     exports school.mdsystem;
+
     opens school.mdsystem.student.model to javafx.fxml;
     exports school.mdsystem.student.model;
+
     opens school.mdsystem.delivery to javafx.graphics, javafx.fxml;
     exports school.mdsystem.delivery;
+
+    opens school.mdsystem.administor to javafx.graphics, javafx.fxml;
+    exports school.mdsystem.administor;
 
 }

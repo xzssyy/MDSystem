@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import school.mdsystem.administor.test_hdlusers;
 import school.mdsystem.delivery.test_pickbills;
 import school.mdsystem.student.SysException;
 import school.mdsystem.student.controller.LoginController;
@@ -29,6 +30,8 @@ public class App extends Application {
         //testStart();              //学生端测试
         productionStart();        //登录
         //loginToDelivery();
+
+        //loginToAdmin();
     }
 
     /**
@@ -43,8 +46,7 @@ public class App extends Application {
             throw new RuntimeException(e);
         }
         try {
-            //loginToBase();
-            loginToDelivery();
+            loginToBase();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -83,7 +85,12 @@ public class App extends Application {
         stage.close();
         test_pickbills tpb = new test_pickbills();
         tpb.showscene();
+    }
 
+    public static void loginToAdmin() throws IOException {
+        stage.close();
+        test_hdlusers tpb = new test_hdlusers();
+        tpb.showscene();
     }
 
     public static void main(String[] args) {

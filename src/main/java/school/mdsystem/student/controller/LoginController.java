@@ -35,6 +35,11 @@ public class LoginController extends Controller{
                 return;
             }
 
+            if(id.equals("adm001")) {
+                App.loginToAdmin();
+                return;
+            }
+
 
 
             Student student = new Student(id, password);

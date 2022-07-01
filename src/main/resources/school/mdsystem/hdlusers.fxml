@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="825.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="school.mdsystem.administor.userController">
+   <children>
+      <VBox prefHeight="602.0" prefWidth="145.0" style="-fx-background-color: #333645;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="155.0" style="-fx-background-color: #00A2D3;" text="Admin" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="hdluser_win" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#jump_users" prefHeight="66.0" prefWidth="151.0" text="用户管理" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="hdlprod_win" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#jump_prod" prefHeight="66.0" prefWidth="151.0" text="货物管理" textFill="#abaaaa">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="hdldialo_win" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#jump_psal" prefHeight="66.0" prefWidth="151.0" text="申请监督" textFill="#abaaaa">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="hdltime_win" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#jump_time" prefHeight="66.0" prefWidth="151.0" text="时间管理" textFill="#abaaaa">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="252.0" layoutY="53.0" prefHeight="219.0" prefWidth="297.0">
+         <children>
+            <ChoiceBox fx:id="choBox" layoutX="110.0" layoutY="12.0" prefHeight="23.0" prefWidth="161.0" />
+            <TextField fx:id="idtxt" layoutX="112.0" layoutY="43.0" prefHeight="24.0" prefWidth="161.0" promptText="账号 id">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="pswtxt" layoutX="112.0" layoutY="77.0" prefHeight="24.0" prefWidth="161.0" promptText="密码 password">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="phonumtxt" layoutX="112.0" layoutY="143.0" prefHeight="24.0" prefWidth="161.0" promptText="联系方式（可选）">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="addrtxt" layoutX="112.0" layoutY="179.0" prefHeight="24.0" prefWidth="161.0" promptText="用户地址（可选）">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="nametxt" layoutX="112.0" layoutY="111.0" prefHeight="24.0" prefWidth="161.0" promptText="用户名（可选）">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <Label layoutX="27.0" layoutY="43.0" prefHeight="26.0" prefWidth="83.0" text="账号：">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="77.0" prefHeight="26.0" prefWidth="83.0" text="密码：">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="111.0" prefHeight="26.0" prefWidth="83.0" text="用户名：">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="143.0" prefHeight="26.0" prefWidth="83.0" text="联系方式：">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="179.0" prefHeight="26.0" prefWidth="83.0" text="用户地址：">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="11.0" prefHeight="26.0" prefWidth="83.0" text="用户类型：">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label contentDisplay="CENTER" layoutX="200.0" layoutY="519.0" prefHeight="35.0" prefWidth="603.0" text="温馨提示：不同操作对基本信息要求不同，可点击按钮...查看操作提示。" textFill="#676060">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="208.0" layoutY="63.0" prefHeight="200.0" prefWidth="43.0">
+         <children>
+            <Label alignment="CENTER" layoutY="-9.0" prefHeight="44.0" prefWidth="43.0" text="用">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutY="35.0" prefHeight="35.0" prefWidth="43.0" text="户">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutY="70.0" prefHeight="44.0" prefWidth="43.0" text="信">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutY="105.0" prefHeight="50.0" prefWidth="43.0" text="息">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="35.0" fitWidth="37.0" layoutX="4.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../R%20(3).png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TextArea fx:id="detailtxt" layoutX="200.0" layoutY="281.0" prefHeight="231.0" prefWidth="548.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextArea>
+      <AnchorPane layoutX="549.0" layoutY="63.0" prefHeight="219.0" prefWidth="43.0">
+         <children>
+            <Label alignment="CENTER" layoutY="35.0" prefHeight="35.0" prefWidth="43.0" text="选">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutY="70.0" prefHeight="44.0" prefWidth="43.0" text="操">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutY="105.0" prefHeight="50.0" prefWidth="43.0" text="作">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="43.0" text="可">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="35.0" fitWidth="37.0" layoutX="4.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../R%20(4).png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="612.0" layoutY="69.0" prefHeight="187.0" prefWidth="105.0">
+         <children>
+            <Button fx:id="addbut" mnemonicParsing="false" onMouseClicked="#adduser" prefHeight="31.0" prefWidth="105.0" text="添加用户" textFill="#6e6c6a">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="updbnt" layoutY="39.0" mnemonicParsing="false" onMouseClicked="#upduser" prefHeight="31.0" prefWidth="105.0" text="更新信息" textFill="#6e6c6a">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="fidbnt" layoutY="115.0" mnemonicParsing="false" onMouseClicked="#fiduser" prefHeight="31.0" prefWidth="105.0" text="查找用户" textFill="#6e6c6a">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="delbnt" layoutY="77.0" mnemonicParsing="false" onMouseClicked="#deluser" prefHeight="31.0" prefWidth="105.0" text="删除用户" textFill="#6e6c6a">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="advbnt" layoutY="155.0" mnemonicParsing="false" onMouseClicked="#givadv" prefHeight="31.0" prefWidth="105.0" text="..." textFill="#6e6c6a">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
