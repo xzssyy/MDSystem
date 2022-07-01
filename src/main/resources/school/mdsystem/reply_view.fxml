@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="788.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="school.mdsystem.logistic.reply_control">
+   <children>
+      <VBox prefHeight="602.0" prefWidth="136.0" style="-fx-background-color: #333645;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="155.0" style="-fx-background-color: #00A2D3;" text="Logistic" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="pickbill_product" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#jump_product" prefHeight="66.0" prefWidth="151.0" text="货物管理" textFill="#abaaaa">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="pickbill_order" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#jump_order" prefHeight="66.0" prefWidth="151.0" text="订单查看" textFill="#abaaaa">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="pickbill_reply" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#jump_reply" prefHeight="66.0" prefWidth="151.0" text="申请回复" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Pane layoutX="136.0" prefHeight="602.0" prefWidth="654.0">
+         <children>
+            <Label layoutX="48.0" layoutY="226.0" text="申请信息列表">
+               <font>
+                  <Font name="SimSun" size="18.0" />
+               </font></Label>
+            <Pane layoutX="48.0" layoutY="55.0" prefHeight="134.0" prefWidth="556.0">
+               <children>
+                  <TextField fx:id="reply_search" layoutY="80.0" prefHeight="27.0" prefWidth="261.0" promptText="输入搜索关键词（于描述中搜索）" />
+                  <Button fx:id="reply_undo_select" layoutX="401.0" layoutY="80.0" mnemonicParsing="false" onAction="#reply_undoselect" text="清空">
+                     <font>
+                        <Font name="SimSun" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="reply_select" layoutX="318.0" layoutY="80.0" mnemonicParsing="false" onAction="#reply_select" text="搜索">
+                     <font>
+                        <Font name="SimSun" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_all_unreply" layoutY="30.0" mnemonicParsing="false" onAction="#all_unreply" style="-fx-pref-width: 130;" text="全部未回复">
+                     <font>
+                        <Font name="SimSun" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_all_reply" layoutX="167.0" layoutY="30.0" mnemonicParsing="false" onAction="#all_reply" style="-fx-pref-width: 130;" text="全部已回复">
+                     <font>
+                        <Font name="SimSun" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_myreply" layoutX="336.0" layoutY="30.0" mnemonicParsing="false" onAction="#myreply" style="-fx-pref-width: 130;" text="本人回复">
+                     <font>
+                        <Font name="SimSun" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <TextArea fx:id="proposal_list" editable="false" layoutX="48.0" layoutY="268.0" prefHeight="221.0" prefWidth="556.0" />
+            <Button fx:id="btn_reply" layoutX="538.0" layoutY="525.0" mnemonicParsing="false" onMouseClicked="#switch_reply" prefHeight="41.0" prefWidth="66.0" style="-fx-background-color: #333645; -fx-background-radius: 0;" text="回复" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="48.0" layoutY="35.0" text="筛选">
+               <font>
+                  <Font name="SimSun" size="18.0" />
+               </font>
+            </Label>
+            <Separator layoutX="48.0" layoutY="191.0" prefHeight="2.0" prefWidth="556.0" />
+         </children>
+      </Pane>
+   </children>
+</Pane>

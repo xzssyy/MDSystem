@@ -42,9 +42,9 @@ public class reply_coffee_control {
     private TextArea reply_textarea; //输入
     
     //数据库相关
-    public static final String dburl = "jdbc:mysql://localhost:3306/java_data";
+    public static final String dburl = "jdbc:mysql://sh-cdb-70hmlmby.sql.tencentcdb.com:58587/sms";
 	public static final String user = "root";
-	public static final String pwd = "Mysql@2021";
+	public static final String pwd = "py20021023";
 	
 
     @FXML

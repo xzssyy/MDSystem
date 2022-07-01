@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import school.mdsystem.App;
 
 
 public class student_reply_coffee extends Application {
@@ -13,10 +14,10 @@ public class student_reply_coffee extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			FXMLLoader f = new FXMLLoader();
-			f.setLocation(student_reply_coffee.class.getResource("reply_coffee_view.fxml"));
+			f.setLocation(App.class.getResource("reply_coffee_view.fxml"));
 			Pane root = (Pane)f.load();
 			Scene scene = new Scene(root,800,600);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			scene.getStylesheets().add(App.class.getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {

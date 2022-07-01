@@ -29,28 +29,8 @@
                         <Font size="30.0" />
                      </font>
                   </Label>
-                  <HBox alignment="CENTER" prefHeight="46.0" prefWidth="224.0" style="-fx-background-color: #ffffff; -fx-background-radius: 100;">
-                     <children>
-                        <TextField alignment="TOP_LEFT" prefHeight="20.0" prefWidth="180.0" promptText="搜索" style="-fx-background-color: #ffffff;">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </TextField>
-                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="69.0" style="-fx-background-color: #828282; -fx-background-radius: 100;" text="搜索" textFill="WHITE">
-                           <HBox.margin>
-                              <Insets left="30.0" />
-                           </HBox.margin>
-                           <font>
-                              <Font name="SimSun" size="12.0" />
-                           </font>
-                        </Button>
-                     </children>
-                     <VBox.margin>
-                        <Insets left="20.0" right="20.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <Pane VBox.vgrow="ALWAYS" />
-                  <VBox fx:id="chosenCard" alignment="CENTER" prefHeight="535.0" prefWidth="224.0" style="-fx-background-radius: 20; -fx-background-color: #333645;">
+                  <Pane prefHeight="40.0" prefWidth="372.0" VBox.vgrow="ALWAYS" />
+                  <VBox fx:id="chosenCard" alignment="CENTER" prefHeight="639.0" prefWidth="312.0" style="-fx-background-radius: 20; -fx-background-color: #333645;">
                      <VBox.margin>
                         <Insets bottom="30.0" left="30.0" right="30.0" />
                      </VBox.margin>
@@ -94,10 +74,13 @@
                                  </font>
                               </Label>
                            </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
                         </HBox>
                         <ImageView fx:id="img" fitHeight="148.0" fitWidth="238.0" pickOnBounds="true">
                            <VBox.margin>
-                              <Insets left="10.0" right="10.0" />
+                              <Insets left="10.0" right="10.0" top="20.0" />
                            </VBox.margin>
                            <image>
                               <Image url="@../../../../../../../2021.12.20%20【デジタル限定】浅倉唯写真集「雨トキドキ唯。」%20週プレ%20PHOTO%20BOOK/45-46.png" />
@@ -135,10 +118,13 @@
                                  </font>
                               </Label>
                            </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
                         </HBox>
                         <Button fx:id="buy" mnemonicParsing="false" onMouseReleased="#addOrder" text="加入购物车">
                            <VBox.margin>
-                              <Insets top="30.0" />
+                              <Insets top="60.0" />
                            </VBox.margin>
                         </Button>
                      </children>

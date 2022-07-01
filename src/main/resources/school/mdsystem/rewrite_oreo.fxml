@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="rewrite_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="788.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="school.mdsystem.logistic.rewrite_control_oreo">
+   <children>
+      <VBox prefHeight="602.0" prefWidth="136.0" style="-fx-background-color: #333645;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="155.0" style="-fx-background-color: #00A2D3;" text="Logistic" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Pane layoutX="136.0" layoutY="-3.0" prefHeight="608.0" prefWidth="652.0">
+         <children>
+            <GridPane layoutX="54.0" layoutY="62.0" prefHeight="189.0" prefWidth="539.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="171.33331298828125" minWidth="10.0" prefWidth="75.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.6667073567708" minWidth="10.0" prefWidth="150.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.6667073567708" minWidth="10.0" prefWidth="27.66668701171875" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.6667073567708" minWidth="10.0" prefWidth="67.66664632161456" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.6667073567708" minWidth="10.0" prefWidth="150.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="53.666656494140625" minHeight="10.0" prefHeight="31.666653951009117" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="53.666656494140625" minHeight="10.0" prefHeight="31.666653951009117" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="107.00000762939453" minHeight="10.0" prefHeight="39.000012715657554" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="107.00000762939453" minHeight="10.0" prefHeight="39.000012715657554" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="数量" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="SimSun" size="15.0" />
+                     </font></Label>
+                  <Label text="商品信息" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="SimSun" size="15.0" />
+                     </font></Label>
+                  <TextField fx:id="text_number" prefHeight="23.0" prefWidth="409.0" promptText="请输入更新后的数字" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="1" />
+                  <TextField fx:id="text_information" promptText="请输入商品信息（少于80字）" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="2" />
+                  <Label text="货物名称">
+                     <font>
+                        <Font name="SimSun" size="15.0" />
+                     </font></Label>
+                  <TextField fx:id="add_product_name" promptText="请输入货物名称" GridPane.columnIndex="1" />
+                  <TextField fx:id="add_product_id" promptText="请编写货物id" GridPane.columnIndex="4" />
+                  <Label alignment="CENTER" contentDisplay="RIGHT" text="货物id" GridPane.columnIndex="3">
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="SimSun" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="单价" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="SimSun" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="pro_price" promptText="请输入商品单价" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <Label layoutX="29.0" layoutY="22.0" text="货物更新">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="rewrite_btn_change" layoutX="521.0" layoutY="550.0" mnemonicParsing="false" onAction="#change" text="确认修改" />
+            <Label layoutX="355.0" layoutY="269.0" text="视频介绍">
+               <font>
+                  <Font name="SimSun" size="15.0" />
+               </font></Label>
+            <Label layoutX="54.0" layoutY="269.0" text="图片">
+               <font>
+                  <Font name="SimSun" size="15.0" />
+               </font></Label>
+            <TextField fx:id="image_url" layoutX="52.0" layoutY="298.0" prefHeight="23.0" prefWidth="236.0" promptText="图片路径（仅在更新时可以修改）" />
+            <TextField fx:id="vedio_url" layoutX="356.0" layoutY="298.0" prefHeight="23.0" prefWidth="236.0" promptText="视频路径" />
+            <Button fx:id="rewrite_oreo_btn_image" layoutX="227.0" layoutY="265.0" mnemonicParsing="false" onAction="#image_upload" text="上传图片" />
+            <Button fx:id="rewrite_oreo_btn_vedio" layoutX="528.0" layoutY="265.0" mnemonicParsing="false" text="上传视频" />
+            <ImageView fx:id="image" fitHeight="199.0" fitWidth="251.0" layoutX="52.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="btn_content_delete" layoutX="442.0" layoutY="550.0" mnemonicParsing="false" onAction="#content_delete" text="清空内容" />
+            <ComboBox fx:id="product_choose" layoutX="133.0" layoutY="24.0" prefHeight="23.0" prefWidth="184.0" promptText="请选择需要更新的货物" />
+            <CheckBox fx:id="ckb_add" layoutX="50.0" layoutY="553.0" mnemonicParsing="false" text="添加货物" />
+            <ComboBox fx:id="type_choose" layoutX="135.0" layoutY="550.0" prefHeight="23.0" prefWidth="198.0" promptText="请选择种类(仅添加货物有效)" />
+         </children>
+      </Pane>
+   </children>
+</Pane>

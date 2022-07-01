@@ -23,4 +23,7 @@ module school.mdsystem {
     opens school.mdsystem.administor to javafx.graphics, javafx.fxml;
     exports school.mdsystem.administor;
 
+    opens school.mdsystem.logistic to javafx.graphics, javafx.fxml;
+    exports school.mdsystem.logistic;
+
 }

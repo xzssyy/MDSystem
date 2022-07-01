@@ -82,9 +82,9 @@ public class order_control {
     
 
     //数据库    
-    public static final String dburl = "jdbc:mysql://localhost:3306/java_data";
+    public static final String dburl = "jdbc:mysql://sh-cdb-70hmlmby.sql.tencentcdb.com:58587/sms";
 	public static final String user = "root";
-	public static final String pwd = "Mysql@2021";
+	public static final String pwd = "py20021023";
 	
 	//清空
     @FXML

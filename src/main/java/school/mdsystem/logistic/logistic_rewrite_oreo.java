@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import school.mdsystem.App;
 
 public class logistic_rewrite_oreo extends Application {
 	Stage primaryStage =new Stage();
@@ -13,7 +14,7 @@ public class logistic_rewrite_oreo extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			FXMLLoader f = new FXMLLoader();
-			f.setLocation(logistic_rewrite_oreo.class.getResource("rewrite_oreo.fxml"));
+			f.setLocation(App.class.getResource("rewrite_oreo.fxml"));
 			Pane root = (Pane)f.load();
 			Scene scene = new Scene(root,800,600);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());

@@ -103,12 +103,12 @@ public class Apply extends Model{
     public static void submit(Apply apply) throws SQLException {
         db = ConnectionFactory.getConnection();
 
-        PreparedStatement stmt = db.prepareStatement("insert into proposal values (default,?,?,?,?,?);");
+        PreparedStatement stmt = db.prepareStatement("insert into proposal values (default,?,?,?,?,null);");
         stmt.setString(1, apply.getS_id());
         stmt.setString(2, apply.getL_id());
         stmt.setString(3, apply.getType());
         stmt.setString(4, apply.getInfo());
-        stmt.setString(5, apply.getReply());
+        //stmt.setString(5, apply.getReply());
 
         stmt.executeUpdate();
         stmt.close();

@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import school.mdsystem.administor.test_hdlusers;
 import school.mdsystem.delivery.test_pickbills;
+import school.mdsystem.logistic.logistic;
 import school.mdsystem.student.SysException;
 import school.mdsystem.student.controller.LoginController;
 
@@ -32,6 +33,7 @@ public class App extends Application {
         //loginToDelivery();
 
         //loginToAdmin();
+        //loginToLogistic();
     }
 
     /**
@@ -90,6 +92,12 @@ public class App extends Application {
     public static void loginToAdmin() throws IOException {
         stage.close();
         test_hdlusers tpb = new test_hdlusers();
+        tpb.showscene();
+    }
+
+    public static void loginToLogistic() throws IOException {
+        stage.close();
+        logistic tpb = new logistic();
         tpb.showscene();
     }
 

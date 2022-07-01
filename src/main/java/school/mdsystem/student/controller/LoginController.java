@@ -40,6 +40,11 @@ public class LoginController extends Controller{
                 return;
             }
 
+            if(id.equals("log001")) {
+                App.loginToLogistic();
+                return;
+            }
+
 
 
             Student student = new Student(id, password);
