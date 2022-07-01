@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="825.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="school.mdsystem.delivery.pbController">
+   <children>
+      <VBox prefHeight="602.0" prefWidth="145.0" style="-fx-background-color: #333645;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="155.0" style="-fx-background-color: #00A2D3;" text="Delivery" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="pickbills_win" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#jump_picbills" prefHeight="66.0" prefWidth="151.0" text="接单处" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="mydelivery_win" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#jump_mydelivery" prefHeight="66.0" prefWidth="151.0" text="我的接单" textFill="#abaaaa">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="ranking_win" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#jump_ranking" prefHeight="66.0" prefWidth="151.0" text="排行榜" textFill="#abaaaa">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Button fx:id="picbbut" layoutX="506.0" layoutY="30.0" mnemonicParsing="false" onAction="#up_delrec" prefHeight="23.0" prefWidth="63.0" text="接单" textFill="#6e6c6a">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="189.0" layoutY="33.0" prefHeight="23.0" prefWidth="102.0" text="选择订单" textFill="#efc20e">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="pictbl" layoutX="189.0" layoutY="75.0" onSort="#tabshow1" prefHeight="454.0" prefWidth="595.0">
+         <columns>
+            <TableColumn fx:id="cm01" prefWidth="143.9999542236328" text="订单编号" />
+            <TableColumn fx:id="cm02" prefWidth="128.00006103515625" text="联系人" />
+            <TableColumn fx:id="cm03" prefWidth="120.00003051757812" text="联系方式" />
+            <TableColumn fx:id="cm04" minWidth="0.0" prefWidth="203.99993896484375" text="目的地址" />
+         </columns>
+      </TableView>
+      <Label contentDisplay="CENTER" layoutX="189.0" layoutY="532.0" prefHeight="35.0" prefWidth="603.0" text="温馨提示：配送员可一次性接下同一目的地址的多个订单，但注意合理判断承载量噢。" textFill="#676060">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="choBtxt" layoutX="297.0" layoutY="27.0" prefHeight="35.0" prefWidth="193.0" promptText="输入欲接订单号">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Slider fx:id="sl00" layoutX="785.0" layoutY="75.0" orientation="VERTICAL" prefHeight="454.0" prefWidth="14.0" />
+      <Button fx:id="renewbnt" layoutX="720.0" layoutY="539.0" mnemonicParsing="false" onAction="#renewtbl" prefHeight="9.0" prefWidth="63.0" text="刷新" textFill="#6e6c6a">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

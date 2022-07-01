@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="panel" onMouseReleased="#itemClick" prefHeight="314.0" prefWidth="344.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="school.mdsystem.student.controller.ItemController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="215.0" prefWidth="330.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="nameLabel" prefHeight="93.0" prefWidth="342.0" text="Cherry">
+               <font>
+                  <Font name="SimSun" size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="priceLabel" prefHeight="47.0" prefWidth="201.0" text="8元">
+                     <font>
+                        <Font name="SimSun" size="22.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label prefHeight="47.0" prefWidth="91.0" text="剩余：">
+                     <font>
+                        <Font name="SimSun" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numsLabel" prefHeight="47.0" prefWidth="105.0">
+                     <font>
+                        <Font name="SimSun" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <center>
+                  <ImageView fx:id="picture" fitHeight="174.0" fitWidth="329.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../../../../../../../屏幕截图%202022-03-23%20232711.png" />
+                     </image>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" />
+                     </BorderPane.margin>
+                  </ImageView>
+               </center>
+            </BorderPane>
+         </children>
+      </VBox>
+   </children>
+   <effect>
+      <DropShadow height="5.0" offsetX="5.0" offsetY="5.0" radius="2.0" spread="0.1" width="5.0">
+         <color>
+            <Color opacity="0.3091602921485901" />
+         </color>
+      </DropShadow>
+   </effect>
+</AnchorPane>

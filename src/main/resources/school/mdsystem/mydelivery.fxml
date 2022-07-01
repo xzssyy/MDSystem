@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="825.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="school.mdsystem.delivery.mrController">
+   <children>
+      <TableView fx:id="udeltbl" layoutX="189.0" layoutY="53.0" onMouseClicked="#tabshow2" prefHeight="181.0" prefWidth="145.0">
+         <columns>
+            <TableColumn fx:id="oc1" prefWidth="144.00000508626303" text="订单编号" />
+         </columns>
+      </TableView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="189.0" layoutY="21.0" prefHeight="35.0" prefWidth="50.0" text="未配送" textFill="#676060">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TableView fx:id="deltbl" layoutX="189.0" layoutY="285.0" onMouseClicked="#tabshow3" prefHeight="255.0" prefWidth="145.0">
+         <columns>
+            <TableColumn fx:id="oc2" prefWidth="144.00000508626303" text="订单编号" />
+         </columns>
+      </TableView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="189.0" layoutY="250.0" prefHeight="35.0" prefWidth="50.0" text="已配送" textFill="#676060">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="detailtxt" layoutX="382.0" layoutY="178.0" prefHeight="155.0" prefWidth="402.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextArea>
+      <AnchorPane layoutX="336.0" layoutY="334.0" prefHeight="221.0" prefWidth="385.0">
+         <children>
+            <ImageView fitHeight="123.0" fitWidth="145.0" layoutX="58.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../R%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="138.0" fitWidth="211.0" layoutX="232.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../R%20(2).png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="sbilbnt" layoutX="640.0" layoutY="57.0" mnemonicParsing="false" onMouseClicked="#showdetail" prefHeight="35.0" prefWidth="77.0" text="查看详情" />
+      <TextField fx:id="sbiltxt" layoutX="449.0" layoutY="57.0" prefHeight="35.0" prefWidth="175.0" promptText="输入订单号" />
+      <VBox prefHeight="602.0" prefWidth="145.0" style="-fx-background-color: #333645;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="155.0" style="-fx-background-color: #00A2D3;" text="Delivery" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="pickbills_win" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#jump_picbills" prefHeight="66.0" prefWidth="151.0" text="接单处" textFill="#abaaaa">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="mydelivery_win" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#jump_mydelivery" prefHeight="66.0" prefWidth="151.0" text="我的接单" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="ranking_win" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#jump_ranking" prefHeight="66.0" prefWidth="151.0" text="排行榜" textFill="#abaaaa">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <TextField fx:id="uptxt" layoutX="449.0" layoutY="112.0" prefHeight="35.0" prefWidth="175.0" promptText="单号" />
+      <Button fx:id="upbnt" layoutX="640.0" layoutY="128.0" mnemonicParsing="false" onMouseClicked="#upstate" prefHeight="23.0" prefWidth="77.0" text="更新" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="388.0" layoutY="61.0" prefHeight="28.0" prefWidth="61.0" text="详情：">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="396.0" layoutY="116.0" prefHeight="28.0" prefWidth="61.0" text="状态：">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="choSbnt" layoutX="640.0" layoutY="100.0" onMouseClicked="#showcho" prefHeight="23.0" prefWidth="77.0" />
+      <Button fx:id="renewbnt" layoutX="256.0" layoutY="256.0" mnemonicParsing="false" onAction="#renewtbl" prefHeight="23.0" prefWidth="77.0" text="刷新" />
+   </children>
+</AnchorPane>

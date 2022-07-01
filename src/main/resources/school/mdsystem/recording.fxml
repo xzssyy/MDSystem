@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1142.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="school.mdsystem.student.controller.RecordingController">
+   <top>
+      <Label alignment="CENTER" prefHeight="104.0" prefWidth="969.0" text="购买记录" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="SimSun" size="38.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <TableView fx:id="table" prefHeight="646.0" prefWidth="804.0" BorderPane.alignment="CENTER" />
+   </center>
+   <left>
+      <Pane prefHeight="646.0" prefWidth="374.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Pane prefHeight="646.0" prefWidth="349.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

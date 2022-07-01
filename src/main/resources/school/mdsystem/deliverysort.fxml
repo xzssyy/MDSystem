@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="825.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="school.mdsystem.delivery.rkController">
+   <children>
+      <VBox prefHeight="602.0" prefWidth="145.0" style="-fx-background-color: #333645;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="155.0" style="-fx-background-color: #00A2D3;" text="Delivery" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="pickbills_win" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#jump_picbills" prefHeight="66.0" prefWidth="151.0" text="接单处" textFill="#abaaaa">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="mydelivery_win" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#jump_mydelivery" prefHeight="66.0" prefWidth="151.0" text="我的接单" textFill="#abaaaa">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="ranking_win" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#jump_ranking" prefHeight="66.0" prefWidth="151.0" text="排行榜" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <ImageView fitHeight="245.0" fitWidth="380.0" layoutX="303.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../R.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="ranbtbl" layoutX="236.0" layoutY="330.0" prefHeight="199.0" prefWidth="521.0">
+         <columns>
+            <TableColumn fx:id="rn0" prefWidth="129.99998474121094" text="排名" />
+            <TableColumn fx:id="rn1" minWidth="0.0" prefWidth="175.99996948242188" text="骑手号" />
+            <TableColumn fx:id="rn2" minWidth="0.0" prefWidth="214.666748046875" text="订单数目" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

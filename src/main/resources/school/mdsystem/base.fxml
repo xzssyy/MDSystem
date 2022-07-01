@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1325.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="school.mdsystem.student.controller.BaseController">
+   <children>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1325.0">
+         <children>
+            <VBox prefHeight="570.0" prefWidth="186.0" style="-fx-background-color: #333645;">
+               <children>
+                  <Label fx:id="userName" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="5.0" prefHeight="85.0" prefWidth="190.0" style="-fx-background-color: #00A2D3;" text="USER" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="GoStudent" alignment="CENTER" onMouseReleased="#goToStudent" prefHeight="67.0" prefWidth="186.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="YEN" size="30">
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label contentDisplay="CENTER" prefHeight="47.0" prefWidth="133.0" text="物资订购" textFill="#abaaaa">
+                           <font>
+                              <Font name="Microsoft JhengHei" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="GoApply" alignment="CENTER" onMouseReleased="#goToApply" prefHeight="67.0" prefWidth="186.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="HAND_PAPER_ALT" size="30" wrappingWidth="26.0">
+                           <HBox.margin>
+                              <Insets left="25.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label contentDisplay="CENTER" prefHeight="47.0" prefWidth="147.0" text="物资申请" textFill="#abaaaa">
+                           <font>
+                              <Font name="Microsoft JhengHei" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="GoRecording" alignment="CENTER" onMouseReleased="#goToRecording" prefHeight="67.0" prefWidth="186.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="LIST_ALT" size="30">
+                           <HBox.margin>
+                              <Insets left="25.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label contentDisplay="CENTER" prefHeight="47.0" prefWidth="133.0" text="购买记录" textFill="#abaaaa">
+                           <font>
+                              <Font name="Microsoft JhengHei" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <AnchorPane fx:id="background" prefHeight="750.0" prefWidth="1142.0" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
