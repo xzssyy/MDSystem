@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 
 /**
  * @Author: 潘越 xzssyy@gmail.com
- * @Description:
+ * @Description:基模型
  */
 public class Model {
 

@@ -24,11 +24,12 @@ public class del_func extends ssql {
         aacString=new String(bill_id);
 
         sjk.getConn();
-        String sql ="select * from delivery where bill_id=?";
+        String sql ="select * from bill where bill_id=?";
         String[] params = new String[]{bill_id};
         ResultSet rs = sjk.executeQuery(sql,params);
 
         if(rs.next()){
+            System.out.println("he");
             c=1;
         }
 

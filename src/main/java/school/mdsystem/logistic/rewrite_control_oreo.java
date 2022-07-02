@@ -14,12 +14,16 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.sql.*;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.function.Consumer;
+
+import school.mdsystem.student.SysException;
+import school.mdsystem.student.utility.*;
 
 public class rewrite_control_oreo {
 
@@ -114,7 +118,7 @@ public class rewrite_control_oreo {
     		
     		fc.setTitle("上传图片");
     		fc.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("图片类型", "*.jpg","*.bmp","*.png","*jpeg"));
-    		fc.setInitialDirectory(new File("D:\\我的数据\\学期\\2.2\\JAVA\\期末大作业0703\\资料_数据库\\product_img"));
+    		fc.setInitialDirectory(new File("C:\\"));
     		List<File> list = fc.showOpenMultipleDialog(stage);
     		list.forEach(new Consumer<File>() {
     			@Override
@@ -130,9 +134,9 @@ public class rewrite_control_oreo {
     }
     
 //数据库    
-    public static final String dburl = "jdbc:mysql://localhost:3306/java_data";
+    public static final String dburl = "jdbc:mysql://sh-cdb-70hmlmby.sql.tencentcdb.com:58587/sms";
 	public static final String user = "root";
-	public static final String pwd = "Mysql@2021";
+	public static final String pwd = "py20021023";
 	
 //信息
     @FXML
@@ -172,9 +176,19 @@ public class rewrite_control_oreo {
 			}
     	}
 		else //修改
-		{	
-			String product = product_choose.getValue().toString();
-			
+		{
+
+			String product = null;
+			try{
+				//解决报错，逻辑好奇怪...
+				product = product_choose.getValue();
+				if(product == null)
+					throw new SysException("请选择一个商品");
+			}catch (SysException ex) {
+			}
+
+			//(product)
+
 			//修改介绍信息		
 			if(!text_information.getText().trim().isEmpty())
 			{
@@ -226,6 +240,7 @@ public class rewrite_control_oreo {
 			//数据库更新图片
 			if(!image_url.getText().trim().isEmpty())
 			{
+				/*
 				try {
 					Connection conn = DriverManager.getConnection(dburl,user,pwd);
 					Statement s = conn.createStatement();
@@ -234,7 +249,18 @@ public class rewrite_control_oreo {
 					s.execute(sql0);
 				}catch(Exception img_e) {
 					img_e.printStackTrace();
+				}*/
+				
+				/**
+				* @Description: 调用学生端图片上传功能
+				*/
+				try {
+					ImageTool.upLoadPicture(image_url.getText().toString(), product);
+				} catch (IOException ex) {
+				} catch (SQLException ex) {
 				}
+
+
 			}
 			
 		}

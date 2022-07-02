@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="367.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="school.mdsystem.student.controller.LoginController">
+<VBox fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="367.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="school.mdsystem.login.LoginController">
     <children>
         <Label prefHeight="39.0" prefWidth="600.0" style="-fx-background-color: #00A2D3;" text="校内物资发放系统" textFill="WHITE">
             <font>
@@ -35,6 +35,7 @@
                 <TextField fx:id="field_id" layoutX="300.0" layoutY="121.0" style="-fx-background-color: #ffffff;" />
             <PasswordField fx:id="field_password" layoutX="300.0" layoutY="188.0" />
             <Button fx:id="loginButton" layoutX="406.0" layoutY="266.0" mnemonicParsing="false" onAction="#login" text="登录" />
+            <Button fx:id="register" layoutX="481.0" layoutY="266.0" mnemonicParsing="false" onMouseReleased="#addStudent" text="注册" />
             </children>
         </AnchorPane>
     </children>

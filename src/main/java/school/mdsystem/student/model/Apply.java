@@ -1,5 +1,7 @@
 package school.mdsystem.student.model;
 
+import school.mdsystem.ConnectionFactory;
+
 import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -9,7 +11,7 @@ import java.util.List;
 
 /**
  * @Author: 潘越 xzssyy@gmail.com
- * @Description:
+ * @Description:学生物资请求模型
  */
 public class Apply extends Model{
     private String id;

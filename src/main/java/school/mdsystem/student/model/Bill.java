@@ -1,6 +1,6 @@
 package school.mdsystem.student.model;
 
-import org.jetbrains.annotations.NotNull;
+import school.mdsystem.ConnectionFactory;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * @Author: 潘越 xzssyy@gmail.com
- * @Description:
+ * @Description:学生账单模型
  */
 public class Bill extends Model{
     private String b_id;
@@ -135,7 +135,7 @@ public class Bill extends Model{
         return result;
     }
 
-    public static @NotNull List<Bill> getAllBill(String s_id) throws SQLException {
+    public static List<Bill> getAllBill(String s_id) throws SQLException {
         List<Bill> ls = new ArrayList<>();
 
 

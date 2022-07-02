@@ -20,7 +20,7 @@ import java.util.ResourceBundle;
 
 /**
  * @Author: 潘越 xzssyy@gmail.com
- * @Description:
+ * @Description:账单详情控制器
  */
 public class DetailController extends Controller implements Initializable {
 
@@ -98,3 +98,4 @@ public class DetailController extends Controller implements Initializable {
         priceView.setText(String.format("%.2f", addAllPrice)+"元");
     }
 }
+

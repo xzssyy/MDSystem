@@ -1,9 +1,8 @@
 package school.mdsystem.student.listener;
 
 /**
- * @Author: xzssyy@gmail.com
- * @Date: 2022/06/29/2:24
- * @Description:
+ * @Author: 潘越 xzssyy@gmail.com
+ * @Description:购物车刷新监听器
  */
 public interface RefreshListener {
 

@@ -1,6 +1,6 @@
 package school.mdsystem.student.model;
 
-import org.jetbrains.annotations.NotNull;
+import school.mdsystem.ConnectionFactory;
 import school.mdsystem.student.SysException;
 
 import java.io.IOException;
@@ -16,7 +16,7 @@ import java.util.List;
 
 /**
  * @Author: 潘越 xzssyy@gmail.com
- * @Description:
+ * @Description:订单记录模型(属于账单里一条记录)
  */
 public class Order extends Model{
     private String o_id;
@@ -63,7 +63,7 @@ public class Order extends Model{
     }
 
 
-    public static @NotNull List<Order> getAllOrder(LocalDate date, String id) throws SQLException {
+    public static List<Order> getAllOrder(LocalDate date, String id) throws SQLException {
         List<Order> ls = new ArrayList<>();
         String formatDate = null;
 

@@ -16,7 +16,7 @@ import java.util.ResourceBundle;
 
 /**
  * @Author: 潘越 xzssyy@gmail.com
- * @Description:
+ * @Description:基页面(菜单栏)控制器
  */
 public class BaseController extends Controller implements Initializable {
     @FXML

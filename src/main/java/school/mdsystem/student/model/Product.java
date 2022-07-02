@@ -1,5 +1,7 @@
 package school.mdsystem.student.model;
 
+import school.mdsystem.ConnectionFactory;
+
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.sql.Blob;
@@ -11,7 +13,7 @@ import java.util.List;
 
 /**
  * @Author: 潘越 xzssyy@gmail.com
- * @Description:
+ * @Description:商品模型
  */
 public class Product extends Model{
     private String id;

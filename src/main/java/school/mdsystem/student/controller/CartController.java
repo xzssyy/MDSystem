@@ -29,7 +29,7 @@ import java.util.ResourceBundle;
 
 /**
  * @Author: 潘越 xzssyy@gmail.com
- * @Description:
+ * @Description:购物车控制器
  */
 public class CartController extends Controller implements Initializable {
     @FXML

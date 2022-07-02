@@ -37,6 +37,7 @@ public class ssql implements Serializable {
             pstm = conn.prepareStatement(sql);
             if (param != null) {
                 for (int i = 0; i < param.length; i++) {
+                    //System.out.println(param[i]);
                     pstm.setString(i + 1, param[i]);
                 }
             }

@@ -1,4 +1,4 @@
-package school.mdsystem.student.model;
+package school.mdsystem;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 /**
  * @Author: 潘越 xzssyy@gmail.com
- * @Description:
+ * @Description:数据库工厂函数
  */
 public class ConnectionFactory {
     private static ConnectionFactory instance = new ConnectionFactory();

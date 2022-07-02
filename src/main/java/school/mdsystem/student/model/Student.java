@@ -1,5 +1,6 @@
 package school.mdsystem.student.model;
 
+import school.mdsystem.ConnectionFactory;
 import school.mdsystem.student.SysException;
 
 import java.sql.PreparedStatement;
@@ -8,7 +9,7 @@ import java.sql.SQLException;
 
 /**
  * @Author: 潘越 xzssyy@gmail.com
- * @Description:
+ * @Description:学生模型
  */
 public class Student extends Model{
     private String id;
@@ -49,8 +50,6 @@ public class Student extends Model{
 
     }
 
-
-
     public String getId() {
         return id;
     }
@@ -71,21 +70,29 @@ public class Student extends Model{
         return address;
     }
 
+    public static void register(String id, String password, String name, String address, String phone) throws SQLException, SysException {
+        db = ConnectionFactory.getConnection();
 
-    //异常处理
-    public String nullOfUser() {
-        return "没有这个人！";
-    }
+        PreparedStatement stmt = db.prepareStatement("SELECT * FROM student where ? = student_id;");
+        stmt.setString(1, id);
+        ResultSet rs = stmt.executeQuery();
 
-
-    //测试
-    public static void main(String[] args) {
-        try {
-            Student st = new Student("10204507405", "ds");
-        } catch (SysException e) {
-            System.out.println(e.toString());
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+        if(rs.next()){
+            rs.close();
+            throw new SysException("该用户已被注册！");
         }
+
+        stmt = db.prepareStatement("insert into student values (?,?,?,?,?);");
+        stmt.setString(1, id);
+        stmt.setString(2, password);
+        stmt.setString(3, name);
+        stmt.setString(4, address);
+        stmt.setString(5, phone);
+        stmt.executeUpdate();
+
+        stmt.close();
+        db.close();
     }
+
+
 }

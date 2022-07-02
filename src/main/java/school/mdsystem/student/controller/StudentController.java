@@ -13,7 +13,6 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.stage.Stage;
-import org.jetbrains.annotations.NotNull;
 import school.mdsystem.App;
 import school.mdsystem.student.SysException;
 import school.mdsystem.student.listener.ProductCardListener;
@@ -41,7 +40,7 @@ import java.util.ResourceBundle;
 
 /**
  * @Author: 潘越 xzssyy@gmail.com
- * @Description:
+ * @Description:学生购买页面控制器
  */
 public class StudentController extends Controller implements Initializable {
     @FXML
@@ -181,7 +180,7 @@ public class StudentController extends Controller implements Initializable {
         return  Product.getAllProducts();
     }
 
-    public void setChosenCard(@NotNull Product product){
+    public void setChosenCard(Product product){
 
         //当前选中的商品为待处理商品
         waitProduct = product;
@@ -251,8 +250,8 @@ public class StudentController extends Controller implements Initializable {
         mediaPlayer.pause();
         MediaView video = new MediaView(mediaPlayer);
         Pane root = new Pane();
-        root.setPrefHeight(1000);
-        root.setPrefWidth(2000);
+        root.setPrefHeight(700);
+        root.setPrefWidth(400);
         root.getChildren().add(video);
         Scene scene = new Scene(root);
         vStage.setScene(scene);
@@ -261,6 +260,7 @@ public class StudentController extends Controller implements Initializable {
         });
 
         img.setOnMouseReleased(mouseEvent -> {
+            vStage.centerOnScreen();
             vStage.show();
             mediaPlayer.play();
         });

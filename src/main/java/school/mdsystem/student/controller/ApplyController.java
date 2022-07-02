@@ -7,7 +7,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import org.jetbrains.annotations.NotNull;
 import school.mdsystem.student.model.Apply;
 
 import java.io.IOException;
@@ -18,7 +17,7 @@ import java.util.ResourceBundle;
 
 /**
  * @Author: 潘越 xzssyy@gmail.com
- * @Description:
+ * @Description:学生申请页面控制器
  */
 public class ApplyController extends Controller implements Initializable{
     @FXML
@@ -49,7 +48,7 @@ public class ApplyController extends Controller implements Initializable{
     /**
      * @Description: 获取申请信息
      */
-    private @NotNull List<Apply> getData() throws SQLException, IOException {
+    private  List<Apply> getData() throws SQLException, IOException {
         return Apply.getAllApplies(user.getId());
     }
 

@@ -1,5 +1,7 @@
 package school.mdsystem.student.model;
 
+import school.mdsystem.ConnectionFactory;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -8,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  * @Author: 潘越 xzssyy@gmail.com
- * @Description:
+ * @Description:开启时间工具模型
  */
 public class Open_time extends Model{
     private static ArrayList<LocalDate> timeList = new ArrayList<>();

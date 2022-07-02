@@ -81,6 +81,7 @@ public class pbController {
 	@FXML
     void up_delrec(ActionEvent event) throws IOException, SQLException{
 		d=choBtxt.getText();
+		//System.out.println(d);
 		del_func aFunction2=new del_func();
 		int c=aFunction2.fid_delrec(d);
 		if(c==1){

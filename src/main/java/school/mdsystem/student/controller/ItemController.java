@@ -11,12 +11,11 @@ import school.mdsystem.student.model.Product;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
-import java.net.URL;
-import java.util.ResourceBundle;
+
 
 /**
  * @Author: 潘越 xzssyy@gmail.com
- * @Description:
+ * @Description:商品列表(条目)控制器
  */
 public class ItemController extends Controller{
     @FXML

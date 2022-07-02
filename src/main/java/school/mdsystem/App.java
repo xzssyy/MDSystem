@@ -8,14 +8,14 @@ import school.mdsystem.administor.test_hdlusers;
 import school.mdsystem.delivery.test_pickbills;
 import school.mdsystem.logistic.logistic;
 import school.mdsystem.student.SysException;
-import school.mdsystem.student.controller.LoginController;
+import school.mdsystem.login.LoginController;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
 /**
  * @Author: 潘越 xzssyy@gmail.com
- * @Description:
+ * @Description:模块跳转
  */
 public class App extends Application {
 

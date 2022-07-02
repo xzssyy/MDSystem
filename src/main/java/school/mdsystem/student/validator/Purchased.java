@@ -2,7 +2,7 @@ package school.mdsystem.student.validator;
 
 /**
  * @Author: 潘越 xzssyy@gmail.com
- * @Description:
+ * @Description:今天是否购买过验证器
  */
 public class Purchased {
     static Boolean value = true;

@@ -7,7 +7,7 @@ import java.time.LocalDate;
 
 /**
  * @Author: 潘越 xzssyy@gmail.com
- * @Description:
+ * @Description:今天是否开启购买验证器
  */
 public class Opened {
     static LocalDate latestTime = null;

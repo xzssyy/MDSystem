@@ -4,7 +4,7 @@ import javafx.scene.control.Alert;
 
 /**
  * @Author: 潘越 xzssyy@gmail.com
- * @Description:
+ * @Description:学生端异常
  */
 public class SysException extends Throwable{
     private String inf;

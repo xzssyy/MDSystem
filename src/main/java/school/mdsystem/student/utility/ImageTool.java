@@ -1,6 +1,6 @@
 package school.mdsystem.student.utility;
 
-import school.mdsystem.student.model.ConnectionFactory;
+import school.mdsystem.ConnectionFactory;
 import school.mdsystem.student.model.Model;
 
 import java.io.ByteArrayOutputStream;
@@ -45,16 +45,35 @@ public class ImageTool extends Model {
         return array;
     }
 
-    public static void upLoadPicture() throws IOException, SQLException {
-        byte[] pic = readPicture();
+    public static byte[] readPicture(String path) throws IOException {
+
+        FileInputStream fis = new FileInputStream(path);
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+
+        int len = 0;
+        byte[] b = new byte[10240 * 1024];
+        while ((len = fis.read(b)) != -1) {
+            out.write(b, 0, len);
+        }
+
+        //接收out
+        byte[] array = out.toByteArray();
+        fis.close();
+        out.close();
+
+        return array;
+    }
+
+    public static void upLoadPicture(String path,String p_name) throws IOException, SQLException {
+        byte[] pic = readPicture(path);
         Blob blob = db.createBlob();
         blob.setBytes(1, pic);
 
-        String sql = "update product set product_pic = ? where product_id = ?";
+        String sql = "update product set product_pic = ? where product_name = ?";
         PreparedStatement ps = db.prepareStatement(sql);
-        String pid = "prod1111";
+        //String pid = "prod1001";
         ps.setBlob(1,blob);
-        ps.setString(2,pid);
+        ps.setString(2,p_name);
         ps.executeUpdate();
 
         ps.close();
@@ -62,6 +81,6 @@ public class ImageTool extends Model {
     }
 
     public static void main(String[] args) throws IOException, SQLException {
-        upLoadPicture();
+        //upLoadPicture();
     }
 }

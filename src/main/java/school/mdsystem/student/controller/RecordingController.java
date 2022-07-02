@@ -22,7 +22,7 @@ import java.util.ResourceBundle;
 
 /**
  * @Author: 潘越 xzssyy@gmail.com
- * @Description:
+ * @Description:学生回复页面控制器
  */
 public class RecordingController extends Controller implements Initializable {
     @FXML

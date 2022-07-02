@@ -9,7 +9,7 @@ import java.time.LocalDate;
 
 /**
  * @Author: 潘越 xzssyy@gmail.com
- * @Description:
+ * @Description:基控制器
  */
 public class Controller {
     protected static Student user;
